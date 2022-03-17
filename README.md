@@ -1,5 +1,7 @@
 # ExpressKV
-A simple in memory and persistent Key - Value store by RESTful endpoints in ExpressJs
+A simple in Memory and persistent Key - Value store by RESTful endpoints in ExpressJs
+This app demostrates keeping key value pairs either in memory or persisting them to disk.
+
 
 Setup - 
 npm init
