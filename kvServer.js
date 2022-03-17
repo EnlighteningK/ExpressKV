@@ -9,8 +9,8 @@ app.use(express.json());
 const hashTable = {};
 
 app.post('/memory/:key', (req, res) => {
-    hashTable[req.params.key] = req.body;
-    console.log('Sucessfully inserted key - ' + req.params.key + ' value '+ req.body);
+    hashTable[req.params.key] = req.body.data;
+    console.log('Sucessfully inserted key - ' + req.params.key + ' value '+ req.body.data);
     res.send();
 });
 
@@ -26,6 +26,7 @@ app.get('/memory/:key', (req, res) => {
 
 app.post('/disk/:key', (req, res) => {
     const destinationFile = `${DATA_DIR}/${req.params.key}`;
+    console.log('Destination is - ' + destinationFile);
     fs.writeFileSync(destinationFile, req.body.data);
     res.send();
 });
