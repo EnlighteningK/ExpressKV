@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 const hashTable = {};
-
+// Testing
 app.post('/memory/:key', (req, res) => {
     hashTable[req.params.key] = req.body.data;
     console.log('Sucessfully inserted key - ' + req.params.key + ' value '+ req.body.data);
