@@ -4,7 +4,7 @@ const fs = require('fs');
 const DATA_DIR = 'disc_data';
 
 const app = express();
-app.use(express.json());
+app.use(express.json()); 
 
 var queue = []; // Use a queue data structure instead for better performance
 var hashTable = {};
